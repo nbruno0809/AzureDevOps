@@ -37,6 +37,8 @@ steps:
   inputs:
     command: 'publish'
     publishWebProjects: true
+    arguments:  --output $(build.artifactStagingDirectory)
+    zipAfterPublish: true
 - task: AzureWebApp@1
   inputs:
     azureSubscription: 'Azure for Students(6b1d2983-f4b2-4831-a532-6eb23325c925)'
