@@ -33,5 +33,5 @@ steps:
     azureSubscription: 'Azure for Students(6b1d2983-f4b2-4831-a532-6eb23325c925)'
     appType: 'webApp'
     appName: 'varian-devops-example'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    package: '$(build.artifactStagingDirectory)/**/*.zip'
     deploymentMethod: 'auto'
