@@ -29,8 +29,10 @@ steps:
 #     configuration: '$(buildConfiguration)'
 
 
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '*/*.sln'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'publish'
